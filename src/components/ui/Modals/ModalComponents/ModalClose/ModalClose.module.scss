@@ -1,0 +1,10 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.wrapperClose {
+  position: absolute;
+  right: 14.87px;
+  top: 14.68px;
+  z-index: 6;
+  cursor: pointer;
+}

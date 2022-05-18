@@ -1,0 +1,17 @@
+@import "src/styles/vars";
+
+.button {
+  width: 100%;
+  padding: 5px 14px;
+  cursor: pointer;
+  border: 1px solid #83ba63;
+  border-radius: 12px;
+  color: #83ba63;
+  background-color: transparent;
+  text-align: center;
+  font-size: 12px;
+}
+.fullGreen {
+  background-color: #83ba63;
+  color: $colorWhite;
+}

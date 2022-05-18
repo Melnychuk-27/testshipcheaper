@@ -1,0 +1,72 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.main {
+  margin-top: 20px;
+}
+.wrapperTable {
+  margin-top: 20px;
+  width: 100%;
+  & .table {
+    width: 100%;
+    min-height: 683px;
+    border: 1px solid $colorDarkBlue;
+    & .headTable,
+    & .itemTable {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      display: grid;
+      grid-template-columns:
+        minmax(58px, 1fr)
+        minmax(150px, 1fr)
+        minmax(150px, 1fr)
+        minmax(150px, 1fr)
+        minmax(100px, 1fr)
+        minmax(95px, 1fr)
+        minmax(90px, 1fr)
+        minmax(100px, 1fr)
+        minmax(100px, 1fr)
+        minmax(90px, 1fr)
+        minmax(103px, 1fr)
+        minmax(64px, 1fr)
+        minmax(75px, 1fr);
+      th,
+      td {
+        @include textOverflowOneLine();
+        text-align: center;
+        padding: 3px 15px;
+        width: 100%;
+        border-bottom: 0.25px solid $colorBlackGray;
+        border-right: 0.25px solid $colorBlackGray;
+        &:last-child {
+          border-right: none;
+        }
+        & .deleteItem {
+          width: fit-content;
+          margin: 0 auto;
+          cursor: pointer;
+        }
+      }
+    }
+
+    & .headTable {
+      background: $colorDarkBlue;
+      color: #ffffff;
+    }
+    & .itemTable {
+      color: $colorDark;
+    }
+    & .emptyBasket {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet1326) {
+  .wrapperTable {
+    overflow-x: auto;
+  }
+}

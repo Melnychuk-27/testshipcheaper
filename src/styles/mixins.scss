@@ -1,0 +1,45 @@
+@mixin star-required() {
+  font-size: 12px;
+  padding-left: 3px;
+}
+
+@mixin error-fildes() {
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(185, 40, 40);
+  text-align: center;
+  font-size: 12px;
+}
+
+@mixin wrapper-modal-div() {
+  position: relative;
+  padding: 30px 25px 20px;
+  width: 100%;
+  max-width: 365px;
+  z-index: 100;
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.24);
+  background: $colorBackGroundWhite;
+}
+
+@mixin scrollStyle {
+  &::-webkit-scrollbar-button {
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorDarkBlue;
+  }
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+@mixin textOverflowOneLine() {
+  @include scrollStyle();
+  overflow-x: auto;
+  white-space: nowrap;
+}
